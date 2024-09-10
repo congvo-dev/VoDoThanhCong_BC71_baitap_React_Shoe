@@ -38,10 +38,11 @@ export default class ExShoe extends Component {
 
     cloneCart[index].total = cloneCart[index].total + option;
     if (cloneCart[index].total < 1) {
-      let newCart = cloneCart.filter((item) => item.id !== idShoe);
-      this.setState({
-        cart: newCart,
-      });
+      //   let newCart = cloneCart.filter((item) => item.id !== idShoe);
+      //   this.setState({
+      //     cart: newCart,
+      //   });
+      this.handleDelete(idShoe);
     } else {
       this.setState({
         cart: cloneCart,
